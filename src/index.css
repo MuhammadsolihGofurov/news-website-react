@@ -1,0 +1,142 @@
+/* import tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variable for css */
+:root {
+    --linear: linear-gradient(90deg, rgba(36, 36, 36, 1) 30%, rgba(36, 36, 36, 0.8464635854341737) 70%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* body */
+body {
+    background-color: #242424;
+    color: white;
+}
+
+/* link */
+a {
+    text-decoration: none;
+}
+
+/* img */
+img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+/* default color */
+section {
+    color: rgb(143, 143, 143)
+}
+
+/* menu */
+.menu::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* banner */
+.banner {
+    position: relative;
+    z-index: 0;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner::before {
+    content: '';
+    width: 70%;
+    height: 100%;
+    background: var(--linear);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1
+}
+.banner-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2
+}
+.banner-img span , .card-img span{
+    width: 100%;
+    height: 100%;
+}
+
+/* heading */
+.heading {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    display: block;
+}
+
+.heading::after,
+.heading::before {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 5px;
+    background-color: rgb(214, 25, 53);
+    z-index: -1;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+}
+
+.heading::before {
+    top: 50%;
+    left: 0;
+}
+
+/* swiper */
+.swiper-wrapper{
+    padding: 30px 0;
+}
+.swiper-pagination-bullet{
+    width:30px;
+    height: 10px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    background-color: white;
+}
+.swiper-button-prev , .swiper-button-next{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 24px;
+    font-weight: bold;
+    color: #242424;
+}
+@media (max-width:768px){
+    .swiper-pagination{
+        display: none;
+    }
+}
+
+  

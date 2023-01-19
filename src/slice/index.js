@@ -1,0 +1,5 @@
+export { default as articleSlice } from './article'
+export { default as categorySlice } from './category'
+export { default as moviesSlice } from './movies'
+export { default as booksSlice } from './books'
+export { default as modalSlice } from './modal'
